@@ -1,11 +1,11 @@
 <h1>ExpNo 1 :Developing AI Agent with PEAS Description</h1>
-<h3>Name: Saravanan N</h3>
-<h3>Register Number/Staff Id: TSML006</h3>
+<h3>Name: PARVEEN SULTHANA J</h3>
+<h3>Register Number:212224040233</h3>
 
 
 <h3>AIM:</h3>
 <br>
-<p>To find the PEAS description for the given AI problem and develop an AI agent.</p>
+<p>To find the PEAS description for the given AI problem and develop an AI agent.</p> 
 <br>
 <h3>Theory</h3>
 <h3>Medicine prescribing agent:</h3>
@@ -39,4 +39,86 @@
 <h3>STEP 4:Implementing the AI agent:</h3>
 <p>Treat unhealthy patients in each room. And check for the unhealthy patients in random room</p>
 <h3>STEP 5:</h3>
-<p>Measure the performance parameters: For each treatment performance incremented, for each movement performance decremented</p>
+<p>Measure the performance parameters: For each treatment performance incremented, for each movement performance decremented</p>'
+
+## PROGRAM
+
+```
+class VacuumCleanerAgent:
+    def __init__(self):
+        self.location = "A"
+        self.dirt = {
+            "A": True,
+            "B": True
+        }
+
+    def move_left(self):
+        if self.location == "B":
+            self.location = "A"
+            print("Moved to A")
+        else:
+            print("Already at A")
+
+    def move_right(self):
+        if self.location == "A":
+            self.location = "B"
+            print("Moved to B")
+        else:
+            print("Already at B")
+
+    def suck(self):
+        if self.dirt[self.location]:
+            self.dirt[self.location] = False
+            print("Cleaned location", self.location)
+        else:
+            print("Location", self.location, "is already clean")
+
+    def do_nothing(self):
+        print("No action performed")
+
+    def perform_action(self, action):
+        if action == "left":
+            self.move_left()
+        elif action == "right":
+            self.move_right()
+        elif action == "suck":
+            self.suck()
+        elif action == "nothing":
+            self.do_nothing()
+        else:
+            print("Invalid Action")
+
+    def display(self):
+        print("----------------------")
+        print("Current Location :", self.location)
+        print("Dirt Status      :", self.dirt)
+        print("----------------------")
+
+agent = VacuumCleanerAgent()
+
+agent.display()
+
+agent.perform_action("suck")
+agent.display()
+
+agent.perform_action("right")
+agent.display()
+
+agent.perform_action("suck")
+agent.display()
+
+agent.perform_action("left")
+agent.display()
+
+agent.perform_action("nothing")
+agent.display()
+
+```
+## Output:
+
+<img width="637" height="285" alt="AI1 1" src="https://github.com/user-attachments/assets/d252d9a6-2fe8-4148-924b-fa60152e0996" />
+
+## Result:
+Thus the Developing AI Agent with PEAS Description is implemented successfully.
+
+
